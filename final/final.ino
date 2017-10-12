@@ -17,7 +17,16 @@ void setup()
               digitalWrite(MOTOR, LOW);
               pinMode(MOTOR1, OUTPUT);          //set motor pin1(7) as output
               digitalWrite(MOTOR1, LOW);
-            
+              /--
+              pinMode(MOTOR, OUTPUT);           //set motor pin1(6) as output
+              digitalWrite(MOTOR, LOW);
+              pinMode(MOTOR1, OUTPUT);          //set motor pin1(7) as output
+              digitalWrite(MOTOR1, LOW);
+              //--
+              pinMode(MOTOR, OUTPUT);           //set motor pin1(6) as output
+              digitalWrite(MOTOR, LOW);
+              pinMode(MOTOR1, OUTPUT);          //set motor pin1(7) as output
+              digitalWrite(MOTOR1, LOW);
        
               Serial.begin(9600);               //baud rate communication 
               dht.begin();                      //start communication with dht11
