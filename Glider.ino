@@ -1,5 +1,25 @@
 /* -------------------- MACRO -----------------------*/
+//#define GLIDER // else Container
+//#define DEBUG
+
+//LİBRARY
+#ifdef GLIDER
+  #include <Adafruit_Sensor.h>
+  #include <Adafruit_LSM303_U.h>
   #include <DS1302.h>
+  #include <SD.h>
+#else
+  #include <Servo.h>
+#endif
+
+#include <SFE_BMP180.h>
+#include <Wire.h>
+#include <XBee.h>
+#include <EEPROM.h>
+
+/* -------------------- Variable -----------------------*/
+struct config_t
+{
     bool IsStarted;
     double BaseLine;
     double PacketCount;
